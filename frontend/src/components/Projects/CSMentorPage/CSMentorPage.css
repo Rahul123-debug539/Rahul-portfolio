@@ -1,0 +1,1682 @@
+/* =========================================================
+   CS MENTOR — CASE STUDY
+========================================================= */
+
+.cs-mentor {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: #0a0a0a;
+  color: #f5f5f5;
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINER
+========================================================= */
+
+.cs-mentor__container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1400px, calc(100% - 96px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.cs-mentor__grid {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+  pointer-events: none;
+
+  opacity: 0.12;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 100px 100px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 0%,
+      transparent 90%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND NUMBER
+========================================================= */
+
+.cs-mentor__background-number {
+  position: absolute;
+
+  top: 5%;
+  right: -7%;
+
+  z-index: 0;
+
+  pointer-events: none;
+  user-select: none;
+
+  font-size:
+    clamp(380px, 48vw, 760px);
+
+  line-height: 0.7;
+
+  font-weight: 500;
+
+  letter-spacing: -0.12em;
+
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(255, 255, 255, 0.035);
+
+  white-space: nowrap;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.cs-mentor__hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 0 90px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.cs-mentor__eyebrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+
+  color: #555;
+}
+
+.cs-mentor__eyebrow span:first-child {
+  color: #aaa;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.cs-mentor__hero-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    370px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding:
+    105px 0
+    80px;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.cs-mentor__hero-title {
+  margin: 0;
+
+  font-size:
+    clamp(100px, 14vw, 205px);
+
+  line-height: 0.72;
+
+  font-weight: 500;
+
+  letter-spacing: -0.095em;
+
+  text-transform: uppercase;
+}
+
+.cs-mentor__hero-line {
+  display: block;
+
+  overflow: hidden;
+}
+
+.cs-mentor__hero-line span {
+  display: inline-block;
+}
+
+
+/* =========================================================
+   HERO COPY
+========================================================= */
+
+.cs-mentor__hero-copy {
+  max-width: 380px;
+
+  padding-bottom: 5px;
+}
+
+.cs-mentor__hero-copy > span {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  color: #4e4e4e;
+}
+
+.cs-mentor__hero-copy p {
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #707070;
+}
+
+
+/* =========================================================
+   HERO META
+========================================================= */
+
+.cs-mentor__hero-meta {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  padding-top: 20px;
+}
+
+.cs-mentor__hero-meta div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.cs-mentor__hero-meta span {
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+
+  color: #444;
+}
+
+.cs-mentor__hero-meta strong {
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+
+  color: #777;
+}
+
+
+/* =========================================================
+   VISUAL SECTION
+========================================================= */
+
+.cs-mentor__visual-section {
+  padding:
+    120px 0
+    100px;
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.cs-mentor__visual {
+  position: relative;
+
+  width: 100%;
+
+  height:
+    min(62vw, 700px);
+
+  min-height: 450px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  background: #111;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   VISUAL INNER
+========================================================= */
+
+.cs-mentor__visual-inner {
+  position: absolute;
+
+  inset: -7%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #1d1d1d 0%,
+      #111 40%,
+      #090909 100%
+    );
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   VISUAL GRID
+========================================================= */
+
+.cs-mentor__visual-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.5;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    );
+
+  background-size: 85px 85px;
+
+  mask-image:
+    radial-gradient(
+      circle,
+      black 0%,
+      transparent 72%
+    );
+}
+
+
+/* =========================================================
+   VISUAL CENTER
+========================================================= */
+
+.cs-mentor__visual-center {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+.cs-mentor__visual-center span {
+  margin-bottom: 20px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+
+  color: #555;
+}
+
+.cs-mentor__visual-center strong {
+  font-size:
+    clamp(55px, 8vw, 110px);
+
+  line-height: 0.82;
+
+  font-weight: 500;
+
+  letter-spacing: -0.08em;
+
+  color: #e7e7e7;
+
+  white-space: nowrap;
+}
+
+.cs-mentor__visual-center small {
+  margin-top: 22px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.16em;
+
+  color: #4a4a4a;
+}
+
+
+/* =========================================================
+   VISUAL CORNERS
+========================================================= */
+
+.cs-mentor__visual-corner {
+  position: absolute;
+
+  z-index: 3;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.13em;
+
+  color: #4b4b4b;
+}
+
+.cs-mentor__visual-corner--tl {
+  top: 25px;
+  left: 25px;
+
+  font-size: 19px;
+
+  color: #777;
+}
+
+.cs-mentor__visual-corner--br {
+  right: 25px;
+  bottom: 25px;
+}
+
+
+/* =========================================================
+   GENERIC SECTION
+========================================================= */
+
+.cs-mentor__section {
+  position: relative;
+
+  padding:
+    150px 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.cs-mentor__section--border {
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   SECTION TOP
+========================================================= */
+
+.cs-mentor__section-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  color: #555;
+}
+
+.cs-mentor__section-top span:first-child {
+  color: #999;
+}
+
+
+/* =========================================================
+   TWO COLUMN
+========================================================= */
+
+.cs-mentor__two-column {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 520px);
+
+  gap: 120px;
+
+  align-items: start;
+
+  padding-top: 90px;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.cs-mentor__section-title {
+  display: flex;
+
+  flex-direction: column;
+
+  margin: 0;
+
+  font-size:
+    clamp(65px, 8vw, 120px);
+
+  line-height: 0.79;
+
+  font-weight: 500;
+
+  letter-spacing: -0.085em;
+
+  text-transform: uppercase;
+}
+
+.cs-mentor__section-title .is-muted,
+.cs-mentor__section-title > .is-muted {
+  color: #3d3d3d;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.cs-mentor__body {
+  max-width: 520px;
+}
+
+.cs-mentor__body p {
+  margin: 0 0 27px;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+
+  color: #686868;
+}
+
+.cs-mentor__body p:last-child {
+  margin-bottom: 0;
+}
+
+.cs-mentor__body .is-large {
+  margin-bottom: 35px;
+
+  font-size: 20px;
+
+  line-height: 1.65;
+
+  color: #999;
+}
+
+
+/* =========================================================
+   PROBLEM
+========================================================= */
+
+.cs-mentor__problem {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 520px);
+
+  gap: 120px;
+
+  align-items: end;
+
+  padding-top: 90px;
+}
+
+
+/* =========================================================
+   SOLUTION FLOW
+========================================================= */
+
+.cs-mentor__flow {
+  margin-top: 45px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.cs-mentor__flow > div {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 15px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.cs-mentor__flow > span {
+  display: block;
+
+  padding: 4px 0;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  color: #444;
+}
+
+.cs-mentor__flow div span {
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  color: #444;
+}
+
+.cs-mentor__flow strong {
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: #777;
+}
+
+
+/* =========================================================
+   FEATURES HEADING
+========================================================= */
+
+.cs-mentor__features-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    380px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding-top: 90px;
+
+  margin-bottom: 80px;
+}
+
+.cs-mentor__features-heading > p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   FEATURES GRID
+========================================================= */
+
+.cs-mentor__features-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.cs-mentor__feature {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 30px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  transition:
+    background 0.4s ease;
+}
+
+.cs-mentor__feature:hover {
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+.cs-mentor__feature-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 75px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.14em;
+
+  color: #444;
+}
+
+.cs-mentor__feature-top span:first-child {
+  color: #888;
+}
+
+.cs-mentor__feature h3 {
+  margin: 0 0 18px;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+
+  color: #bbb;
+}
+
+.cs-mentor__feature p {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  color: #5d5d5d;
+}
+
+.cs-mentor__feature-arrow {
+  position: absolute;
+
+  right: 30px;
+  bottom: 25px;
+
+  font-size: 20px;
+
+  color: #444;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.cs-mentor__feature:hover
+.cs-mentor__feature-arrow {
+  color: #aaa;
+
+  transform:
+    translate(
+      4px,
+      -4px
+    );
+}
+
+
+/* =========================================================
+   ARCHITECTURE
+========================================================= */
+
+.cs-mentor__architecture-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    380px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding-top: 90px;
+
+  margin-bottom: 80px;
+}
+
+.cs-mentor__architecture-heading p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   ARCHITECTURE LIST
+========================================================= */
+
+.cs-mentor__architecture-list {
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.cs-mentor__architecture-item {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    220px
+    minmax(0, 1fr)
+    40px;
+
+  gap: 30px;
+
+  align-items: center;
+
+  padding: 28px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.cs-mentor__architecture-item > span:first-child {
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  color: #555;
+}
+
+.cs-mentor__architecture-item h3 {
+  margin: 0;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  color: #aaa;
+}
+
+.cs-mentor__architecture-item p {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+
+  color: #5c5c5c;
+}
+
+.cs-mentor__architecture-arrow {
+  font-size: 18px;
+
+  color: #444;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   STACK SECTION
+========================================================= */
+
+.cs-mentor__stack-section {
+  position: relative;
+
+  padding:
+    140px 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.cs-mentor__stack-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    380px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding-top: 90px;
+
+  margin-bottom: 65px;
+}
+
+.cs-mentor__stack-heading p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   STACK
+========================================================= */
+
+.cs-mentor__stack {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.cs-mentor__stack-item {
+  padding:
+    13px 18px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.11);
+
+  border-radius: 100px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+
+  color: #666;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.cs-mentor__stack-item:hover {
+  color: #eee;
+
+  border-color:
+    rgba(255, 255, 255, 0.35);
+
+  background:
+    rgba(255, 255, 255, 0.03);
+
+  transform:
+    translateY(-3px);
+}
+
+
+/* =========================================================
+   CONTRIBUTION
+========================================================= */
+
+.cs-mentor__contribution {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 520px);
+
+  gap: 120px;
+
+  padding-top: 90px;
+}
+
+.cs-mentor__body ul {
+  list-style: none;
+
+  margin: 40px 0 0;
+  padding: 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.cs-mentor__body li {
+  padding:
+    15px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  font-size: 12px;
+
+  color: #666;
+}
+
+.cs-mentor__body li::before {
+  content: "↗";
+
+  display: inline-block;
+
+  margin-right: 15px;
+
+  color: #444;
+}
+
+
+/* =========================================================
+   CHALLENGES
+========================================================= */
+
+.cs-mentor__challenges-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  margin-top: 20px;
+}
+
+.cs-mentor__challenge {
+  min-height: 310px;
+
+  padding: 30px;
+
+  background: #0a0a0a;
+}
+
+.cs-mentor__challenge > span {
+  display: block;
+
+  margin-bottom: 70px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  color: #555;
+}
+
+.cs-mentor__challenge h3 {
+  margin: 0 0 18px;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  color: #aaa;
+}
+
+.cs-mentor__challenge p {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  color: #5d5d5d;
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.cs-mentor__result {
+  position: relative;
+
+  padding:
+    180px 0
+    200px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.cs-mentor__result-content {
+  max-width: 1000px;
+}
+
+.cs-mentor__result-content > span {
+  display: block;
+
+  margin-bottom: 45px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  color: #555;
+}
+
+.cs-mentor__result-content h2 {
+  margin: 0 0 50px;
+
+  font-size:
+    clamp(80px, 12vw, 175px);
+
+  line-height: 0.75;
+
+  font-weight: 500;
+
+  letter-spacing: -0.09em;
+}
+
+.cs-mentor__result-content h2 span {
+  color: #3e3e3e;
+}
+
+.cs-mentor__result-content p {
+  max-width: 480px;
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.cs-mentor__links {
+  padding:
+    80px 0
+    120px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.cs-mentor__links-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  color: #555;
+}
+
+.cs-mentor__links-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1px;
+
+  margin-top: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.cs-mentor__links-grid a {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 150px;
+
+  padding: 25px;
+
+  background: #0a0a0a;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+
+  color: #666;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.cs-mentor__links-grid a:hover {
+  background: #f5f5f5;
+
+  color: #0a0a0a;
+}
+
+.cs-mentor__links-grid strong {
+  font-size: 22px;
+
+  font-weight: 400;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.cs-mentor__links-grid a:hover strong {
+  transform:
+    translate(
+      5px,
+      -5px
+    );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .cs-mentor__container {
+    width:
+      calc(100% - 60px);
+  }
+
+  .cs-mentor__hero-content {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .cs-mentor__hero-copy {
+    max-width: 600px;
+  }
+
+  .cs-mentor__two-column,
+  .cs-mentor__problem,
+  .cs-mentor__contribution {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .cs-mentor__features-heading,
+  .cs-mentor__architecture-heading,
+  .cs-mentor__stack-heading {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .cs-mentor__architecture-item {
+    grid-template-columns:
+      60px
+      180px
+      minmax(0, 1fr)
+      30px;
+  }
+
+  .cs-mentor__challenges-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .cs-mentor__container {
+    width:
+      calc(100% - 30px);
+  }
+
+
+  /* HERO */
+
+  .cs-mentor__hero {
+    min-height: auto;
+
+    padding:
+      120px 0
+      70px;
+  }
+
+  .cs-mentor__eyebrow {
+    font-size: 7px;
+  }
+
+  .cs-mentor__hero-content {
+    padding:
+      75px 0
+      55px;
+
+    gap: 45px;
+  }
+
+  .cs-mentor__hero-title {
+    font-size:
+      clamp(68px, 18vw, 105px);
+  }
+
+  .cs-mentor__hero-copy p {
+    font-size: 12px;
+  }
+
+  .cs-mentor__hero-meta {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 25px 15px;
+  }
+
+
+  /* VISUAL */
+
+  .cs-mentor__visual-section {
+    padding:
+      75px 0
+      70px;
+  }
+
+  .cs-mentor__visual {
+    height: 110vw;
+
+    min-height: 360px;
+  }
+
+  .cs-mentor__visual-inner {
+    inset: -8%;
+  }
+
+  .cs-mentor__visual-grid {
+    background-size:
+      55px 55px;
+  }
+
+  .cs-mentor__visual-center strong {
+    font-size:
+      clamp(38px, 11vw, 62px);
+  }
+
+  .cs-mentor__visual-center span,
+  .cs-mentor__visual-center small {
+    font-size: 6px;
+  }
+
+  .cs-mentor__visual-corner--tl {
+    top: 18px;
+    left: 18px;
+  }
+
+  .cs-mentor__visual-corner--br {
+    right: 18px;
+    bottom: 18px;
+
+    font-size: 6px;
+  }
+
+
+  /* SECTIONS */
+
+  .cs-mentor__section {
+    padding:
+      95px 0;
+  }
+
+  .cs-mentor__section-top {
+    font-size: 7px;
+  }
+
+  .cs-mentor__two-column,
+  .cs-mentor__problem,
+  .cs-mentor__contribution {
+    padding-top: 60px;
+
+    gap: 55px;
+  }
+
+  .cs-mentor__section-title {
+    font-size:
+      clamp(52px, 14vw, 82px);
+  }
+
+  .cs-mentor__body .is-large {
+    font-size: 17px;
+  }
+
+  .cs-mentor__body p {
+    font-size: 12px;
+  }
+
+
+  /* FLOW */
+
+  .cs-mentor__flow {
+    margin-top: 35px;
+  }
+
+
+  /* FEATURES */
+
+  .cs-mentor__features-heading,
+  .cs-mentor__architecture-heading,
+  .cs-mentor__stack-heading {
+    padding-top: 60px;
+
+    gap: 35px;
+
+    margin-bottom: 50px;
+  }
+
+  .cs-mentor__features-heading > p,
+  .cs-mentor__architecture-heading p,
+  .cs-mentor__stack-heading p {
+    font-size: 12px;
+  }
+
+  .cs-mentor__features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-mentor__feature {
+    min-height: 290px;
+
+    padding: 25px;
+  }
+
+  .cs-mentor__feature-top {
+    margin-bottom: 60px;
+  }
+
+
+  /* ARCHITECTURE */
+
+  .cs-mentor__architecture-list {
+    margin-top: 0;
+  }
+
+  .cs-mentor__architecture-item {
+    grid-template-columns:
+      35px
+      1fr
+      25px;
+
+    gap: 15px;
+  }
+
+  .cs-mentor__architecture-item p {
+    grid-column: 2 / 3;
+
+    font-size: 11px;
+  }
+
+  .cs-mentor__architecture-arrow {
+    grid-column: 3;
+    grid-row: 1;
+
+    align-self: start;
+  }
+
+
+  /* STACK */
+
+  .cs-mentor__stack-section {
+    padding:
+      95px 0;
+  }
+
+  .cs-mentor__stack {
+    gap: 7px;
+  }
+
+  .cs-mentor__stack-item {
+    padding:
+      10px 13px;
+
+    font-size: 7px;
+  }
+
+
+  /* CONTRIBUTION */
+
+  .cs-mentor__body li {
+    font-size: 11px;
+  }
+
+
+  /* CHALLENGES */
+
+  .cs-mentor__challenge {
+    min-height: 250px;
+
+    padding: 25px;
+  }
+
+  .cs-mentor__challenge > span {
+    margin-bottom: 55px;
+  }
+
+
+  /* RESULT */
+
+  .cs-mentor__result {
+    padding:
+      110px 0
+      130px;
+  }
+
+  .cs-mentor__result-content > span {
+    margin-bottom: 35px;
+  }
+
+  .cs-mentor__result-content h2 {
+    margin-bottom: 40px;
+
+    font-size:
+      clamp(60px, 18vw, 100px);
+  }
+
+  .cs-mentor__result-content p {
+    font-size: 12px;
+  }
+
+
+  /* LINKS */
+
+  .cs-mentor__links {
+    padding:
+      70px 0
+      100px;
+  }
+
+  .cs-mentor__links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-mentor__links-grid a {
+    min-height: 110px;
+  }
+
+
+  /* BACKGROUND */
+
+  .cs-mentor__background-number {
+    top: 8%;
+
+    right: -28%;
+
+    font-size: 320px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .cs-mentor__container {
+    width:
+      calc(100% - 24px);
+  }
+
+  .cs-mentor__hero-title {
+    font-size: 63px;
+  }
+
+  .cs-mentor__visual {
+    min-height: 330px;
+  }
+
+  .cs-mentor__visual-center strong {
+    font-size: 34px;
+  }
+
+  .cs-mentor__section-title {
+    font-size: 48px;
+  }
+
+  .cs-mentor__result-content h2 {
+    font-size: 57px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-mentor__visual-inner,
+  .cs-mentor__background-number {
+    transform: none !important;
+  }
+}

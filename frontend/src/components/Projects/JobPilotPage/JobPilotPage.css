@@ -1,0 +1,1865 @@
+/* =========================================================
+   JOBPILOT AI — CASE STUDY
+========================================================= */
+
+.jobpilot {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: #0a0a0a;
+  color: #f5f5f5;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.jobpilot__container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1400px, calc(100% - 96px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.jobpilot__grid {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+  pointer-events: none;
+
+  opacity: 0.12;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 100px 100px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 0%,
+      transparent 90%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND NUMBER
+========================================================= */
+
+.jobpilot__background-number {
+  position: absolute;
+
+  top: 5%;
+  right: -8%;
+
+  z-index: 0;
+
+  pointer-events: none;
+  user-select: none;
+
+  font-size:
+    clamp(360px, 48vw, 760px);
+
+  line-height: 0.7;
+
+  font-weight: 500;
+
+  letter-spacing: -0.12em;
+
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(255, 255, 255, 0.035);
+
+  white-space: nowrap;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.jobpilot__hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 0 90px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.jobpilot__eyebrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+
+  color: #555;
+}
+
+.jobpilot__eyebrow span:first-child {
+  color: #aaa;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.jobpilot__hero-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    380px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding:
+    105px 0
+    80px;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.jobpilot__hero-title {
+  margin: 0;
+
+  font-size:
+    clamp(90px, 13vw, 190px);
+
+  line-height: 0.72;
+
+  font-weight: 500;
+
+  letter-spacing: -0.095em;
+
+  text-transform: uppercase;
+}
+
+.jobpilot__hero-line {
+  display: block;
+
+  overflow: hidden;
+}
+
+.jobpilot__hero-line span {
+  display: inline-block;
+}
+
+.jobpilot__muted {
+  color: #3d3d3d;
+}
+
+
+/* =========================================================
+   HERO COPY
+========================================================= */
+
+.jobpilot__hero-copy {
+  max-width: 390px;
+
+  padding-bottom: 5px;
+}
+
+.jobpilot__hero-copy > span {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  color: #4e4e4e;
+}
+
+.jobpilot__hero-copy p {
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #707070;
+}
+
+
+/* =========================================================
+   HERO META
+========================================================= */
+
+.jobpilot__hero-meta {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  padding-top: 20px;
+}
+
+.jobpilot__hero-meta div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.jobpilot__hero-meta span {
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+
+  color: #444;
+}
+
+.jobpilot__hero-meta strong {
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+
+  color: #777;
+}
+
+
+/* =========================================================
+   VISUAL SECTION
+========================================================= */
+
+.jobpilot__visual-section {
+  padding:
+    120px 0
+    100px;
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.jobpilot__visual {
+  position: relative;
+
+  width: 100%;
+
+  height:
+    min(62vw, 700px);
+
+  min-height: 450px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  background: #101010;
+}
+
+
+/* =========================================================
+   VISUAL INNER
+========================================================= */
+
+.jobpilot__visual-inner {
+  position: absolute;
+
+  inset: -7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #1c1c1c 0%,
+      #111 42%,
+      #080808 100%
+    );
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   VISUAL GRID
+========================================================= */
+
+.jobpilot__visual-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.55;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    );
+
+  background-size: 85px 85px;
+
+  mask-image:
+    radial-gradient(
+      circle,
+      black 0%,
+      transparent 70%
+    );
+}
+
+
+/* =========================================================
+   VISUAL ORBIT
+========================================================= */
+
+.jobpilot__visual-orbit {
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 80px
+    rgba(255, 255, 255, 0.025);
+}
+
+.jobpilot__visual-orbit::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 55px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
+}
+
+.jobpilot__visual-orbit::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: -8px;
+
+  width: 16px;
+  height: 16px;
+
+  transform:
+    translateY(-50%);
+
+  border-radius: 50%;
+
+  background: #888;
+
+  box-shadow:
+    0 0 30px
+    rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   VISUAL CENTER
+========================================================= */
+
+.jobpilot__visual-center {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+.jobpilot__visual-center span {
+  margin-bottom: 20px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+
+  color: #555;
+}
+
+.jobpilot__visual-center strong {
+  font-size:
+    clamp(48px, 7vw, 100px);
+
+  line-height: 0.82;
+
+  font-weight: 500;
+
+  letter-spacing: -0.08em;
+
+  color: #e7e7e7;
+
+  white-space: nowrap;
+}
+
+.jobpilot__visual-center small {
+  margin-top: 22px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.16em;
+
+  color: #4a4a4a;
+}
+
+
+/* =========================================================
+   VISUAL CORNERS
+========================================================= */
+
+.jobpilot__visual-corner {
+  position: absolute;
+
+  z-index: 3;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.13em;
+
+  color: #4b4b4b;
+}
+
+.jobpilot__visual-corner--tl {
+  top: 25px;
+  left: 25px;
+
+  font-size: 19px;
+
+  color: #777;
+}
+
+.jobpilot__visual-corner--br {
+  right: 25px;
+  bottom: 25px;
+}
+
+
+/* =========================================================
+   GENERIC SECTION
+========================================================= */
+
+.jobpilot__section {
+  position: relative;
+
+  padding:
+    150px 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.jobpilot__section--border {
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   SECTION TOP
+========================================================= */
+
+.jobpilot__section-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  color: #555;
+}
+
+.jobpilot__section-top span:first-child {
+  color: #999;
+}
+
+
+/* =========================================================
+   TWO COLUMN
+========================================================= */
+
+.jobpilot__two-column {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 520px);
+
+  gap: 120px;
+
+  align-items: start;
+
+  padding-top: 90px;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.jobpilot__section-title {
+  display: flex;
+
+  flex-direction: column;
+
+  margin: 0;
+
+  font-size:
+    clamp(65px, 8vw, 120px);
+
+  line-height: 0.79;
+
+  font-weight: 500;
+
+  letter-spacing: -0.085em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.jobpilot__body {
+  max-width: 520px;
+}
+
+.jobpilot__body p {
+  margin: 0 0 27px;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+
+  color: #686868;
+}
+
+.jobpilot__body p:last-child {
+  margin-bottom: 0;
+}
+
+.jobpilot__body .is-large {
+  margin-bottom: 35px;
+
+  font-size: 20px;
+
+  line-height: 1.65;
+
+  color: #999;
+}
+
+
+/* =========================================================
+   PROBLEM
+========================================================= */
+
+.jobpilot__problem {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 520px);
+
+  gap: 120px;
+
+  align-items: end;
+
+  padding-top: 90px;
+}
+
+
+/* =========================================================
+   SOLUTION FLOW
+========================================================= */
+
+.jobpilot__flow {
+  margin-top: 45px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.jobpilot__flow > div {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 15px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.jobpilot__flow > span {
+  display: block;
+
+  padding: 4px 0;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  color: #444;
+}
+
+.jobpilot__flow div span {
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  color: #444;
+}
+
+.jobpilot__flow strong {
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: #777;
+}
+
+
+/* =========================================================
+   FEATURES HEADING
+========================================================= */
+
+.jobpilot__features-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    380px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding-top: 90px;
+
+  margin-bottom: 80px;
+}
+
+.jobpilot__features-heading > p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   FEATURES GRID
+========================================================= */
+
+.jobpilot__features-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.jobpilot__feature {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 30px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  transition:
+    background 0.4s ease;
+}
+
+.jobpilot__feature:hover {
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+.jobpilot__feature-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 75px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.14em;
+
+  color: #444;
+}
+
+.jobpilot__feature-top span:first-child {
+  color: #888;
+}
+
+.jobpilot__feature h3 {
+  margin: 0 0 18px;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+
+  color: #bbb;
+}
+
+.jobpilot__feature p {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  color: #5d5d5d;
+}
+
+.jobpilot__feature-arrow {
+  position: absolute;
+
+  right: 30px;
+  bottom: 25px;
+
+  font-size: 20px;
+
+  color: #444;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.jobpilot__feature:hover
+.jobpilot__feature-arrow {
+  color: #aaa;
+
+  transform:
+    translate(4px, -4px);
+}
+
+
+/* =========================================================
+   WORKFLOW HEADING
+========================================================= */
+
+.jobpilot__workflow-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    380px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding-top: 90px;
+
+  margin-bottom: 80px;
+}
+
+.jobpilot__workflow-heading p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   WORKFLOW LIST
+========================================================= */
+
+.jobpilot__workflow-list {
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.jobpilot__workflow-item {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    220px
+    minmax(0, 1fr)
+    40px;
+
+  gap: 30px;
+
+  align-items: center;
+
+  padding: 28px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.jobpilot__workflow-item > span:first-child {
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  color: #555;
+}
+
+.jobpilot__workflow-item h3 {
+  margin: 0;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  color: #aaa;
+}
+
+.jobpilot__workflow-item p {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+
+  color: #5c5c5c;
+}
+
+.jobpilot__workflow-arrow {
+  font-size: 18px;
+
+  color: #444;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   ARCHITECTURE
+========================================================= */
+
+.jobpilot__architecture-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    380px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding-top: 90px;
+
+  margin-bottom: 80px;
+}
+
+.jobpilot__architecture-heading p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   ARCHITECTURE LIST
+========================================================= */
+
+.jobpilot__architecture-list {
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.jobpilot__architecture-item {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    220px
+    minmax(0, 1fr)
+    40px;
+
+  gap: 30px;
+
+  align-items: center;
+
+  padding: 28px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.jobpilot__architecture-item > span:first-child {
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  color: #555;
+}
+
+.jobpilot__architecture-item h3 {
+  margin: 0;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  color: #aaa;
+}
+
+.jobpilot__architecture-item p {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+
+  color: #5c5c5c;
+}
+
+.jobpilot__architecture-arrow {
+  font-size: 18px;
+
+  color: #444;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   STACK SECTION
+========================================================= */
+
+.jobpilot__stack-section {
+  position: relative;
+
+  padding:
+    140px 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.jobpilot__stack-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    380px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding-top: 90px;
+
+  margin-bottom: 65px;
+}
+
+.jobpilot__stack-heading p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   STACK
+========================================================= */
+
+.jobpilot__stack {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.jobpilot__stack-item {
+  padding:
+    13px 18px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.11);
+
+  border-radius: 100px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+
+  color: #666;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.jobpilot__stack-item:hover {
+  color: #eee;
+
+  border-color:
+    rgba(255, 255, 255, 0.35);
+
+  background:
+    rgba(255, 255, 255, 0.03);
+
+  transform:
+    translateY(-3px);
+}
+
+
+/* =========================================================
+   CONTRIBUTION
+========================================================= */
+
+.jobpilot__contribution {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 520px);
+
+  gap: 120px;
+
+  padding-top: 90px;
+}
+
+.jobpilot__body ul {
+  list-style: none;
+
+  margin: 40px 0 0;
+  padding: 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.jobpilot__body li {
+  padding:
+    15px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  font-size: 12px;
+
+  color: #666;
+}
+
+.jobpilot__body li::before {
+  content: "↗";
+
+  display: inline-block;
+
+  margin-right: 15px;
+
+  color: #444;
+}
+
+
+/* =========================================================
+   CHALLENGES
+========================================================= */
+
+.jobpilot__challenges-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  margin-top: 20px;
+}
+
+.jobpilot__challenge {
+  min-height: 310px;
+
+  padding: 30px;
+
+  background: #0a0a0a;
+
+  transition:
+    background 0.35s ease;
+}
+
+.jobpilot__challenge:hover {
+  background: #101010;
+}
+
+.jobpilot__challenge > span {
+  display: block;
+
+  margin-bottom: 70px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  color: #555;
+}
+
+.jobpilot__challenge h3 {
+  margin: 0 0 18px;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  color: #aaa;
+}
+
+.jobpilot__challenge p {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  color: #5d5d5d;
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.jobpilot__result {
+  position: relative;
+
+  padding:
+    180px 0
+    200px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.jobpilot__result-content {
+  max-width: 1000px;
+}
+
+.jobpilot__result-content > span {
+  display: block;
+
+  margin-bottom: 45px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  color: #555;
+}
+
+.jobpilot__result-content h2 {
+  margin: 0 0 50px;
+
+  font-size:
+    clamp(80px, 12vw, 175px);
+
+  line-height: 0.75;
+
+  font-weight: 500;
+
+  letter-spacing: -0.09em;
+}
+
+.jobpilot__result-content h2 span {
+  color: #3e3e3e;
+}
+
+.jobpilot__result-content p {
+  max-width: 480px;
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.jobpilot__links {
+  padding:
+    80px 0
+    120px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.jobpilot__links-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  color: #555;
+}
+
+.jobpilot__links-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1px;
+
+  margin-top: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.jobpilot__links-grid a {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 150px;
+
+  padding: 25px;
+
+  background: #0a0a0a;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+
+  color: #666;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.jobpilot__links-grid a:hover {
+  background: #f5f5f5;
+
+  color: #0a0a0a;
+}
+
+.jobpilot__links-grid strong {
+  font-size: 22px;
+
+  font-weight: 400;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.jobpilot__links-grid a:hover strong {
+  transform:
+    translate(
+      5px,
+      -5px
+    );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .jobpilot__container {
+    width:
+      calc(100% - 60px);
+  }
+
+  .jobpilot__hero-content {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .jobpilot__hero-copy {
+    max-width: 600px;
+  }
+
+  .jobpilot__two-column,
+  .jobpilot__problem,
+  .jobpilot__contribution {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .jobpilot__features-heading,
+  .jobpilot__workflow-heading,
+  .jobpilot__architecture-heading,
+  .jobpilot__stack-heading {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .jobpilot__workflow-item,
+  .jobpilot__architecture-item {
+    grid-template-columns:
+      60px
+      180px
+      minmax(0, 1fr)
+      30px;
+  }
+
+  .jobpilot__challenges-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .jobpilot__container {
+    width:
+      calc(100% - 30px);
+  }
+
+
+  /* HERO */
+
+  .jobpilot__hero {
+    min-height: auto;
+
+    padding:
+      120px 0
+      70px;
+  }
+
+  .jobpilot__eyebrow {
+    font-size: 7px;
+  }
+
+  .jobpilot__hero-content {
+    padding:
+      75px 0
+      55px;
+
+    gap: 45px;
+  }
+
+  .jobpilot__hero-title {
+    font-size:
+      clamp(58px, 16vw, 100px);
+  }
+
+  .jobpilot__hero-copy p {
+    font-size: 12px;
+  }
+
+  .jobpilot__hero-meta {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 25px 15px;
+  }
+
+
+  /* VISUAL */
+
+  .jobpilot__visual-section {
+    padding:
+      75px 0
+      70px;
+  }
+
+  .jobpilot__visual {
+    height: 110vw;
+
+    min-height: 360px;
+  }
+
+  .jobpilot__visual-inner {
+    inset: -8%;
+  }
+
+  .jobpilot__visual-grid {
+    background-size:
+      55px 55px;
+  }
+
+  .jobpilot__visual-orbit {
+    width: 260px;
+    height: 260px;
+  }
+
+  .jobpilot__visual-orbit::before {
+    inset: 35px;
+  }
+
+  .jobpilot__visual-center strong {
+    font-size:
+      clamp(32px, 9vw, 55px);
+  }
+
+  .jobpilot__visual-center span,
+  .jobpilot__visual-center small {
+    font-size: 6px;
+  }
+
+  .jobpilot__visual-corner--tl {
+    top: 18px;
+    left: 18px;
+  }
+
+  .jobpilot__visual-corner--br {
+    right: 18px;
+    bottom: 18px;
+
+    font-size: 6px;
+  }
+
+
+  /* SECTIONS */
+
+  .jobpilot__section {
+    padding:
+      95px 0;
+  }
+
+  .jobpilot__section-top {
+    font-size: 7px;
+  }
+
+  .jobpilot__two-column,
+  .jobpilot__problem,
+  .jobpilot__contribution {
+    padding-top: 60px;
+
+    gap: 55px;
+  }
+
+  .jobpilot__section-title {
+    font-size:
+      clamp(48px, 13vw, 82px);
+  }
+
+  .jobpilot__body .is-large {
+    font-size: 17px;
+  }
+
+  .jobpilot__body p {
+    font-size: 12px;
+  }
+
+
+  /* FLOW */
+
+  .jobpilot__flow {
+    margin-top: 35px;
+  }
+
+
+  /* FEATURES */
+
+  .jobpilot__features-heading,
+  .jobpilot__workflow-heading,
+  .jobpilot__architecture-heading,
+  .jobpilot__stack-heading {
+    padding-top: 60px;
+
+    gap: 35px;
+
+    margin-bottom: 50px;
+  }
+
+  .jobpilot__features-heading > p,
+  .jobpilot__workflow-heading p,
+  .jobpilot__architecture-heading p,
+  .jobpilot__stack-heading p {
+    font-size: 12px;
+  }
+
+  .jobpilot__features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jobpilot__feature {
+    min-height: 290px;
+
+    padding: 25px;
+  }
+
+  .jobpilot__feature-top {
+    margin-bottom: 60px;
+  }
+
+
+  /* WORKFLOW */
+
+  .jobpilot__workflow-item,
+  .jobpilot__architecture-item {
+    grid-template-columns:
+      35px
+      1fr
+      25px;
+
+    gap: 15px;
+  }
+
+  .jobpilot__workflow-item p,
+  .jobpilot__architecture-item p {
+    grid-column: 2 / 3;
+
+    font-size: 11px;
+  }
+
+  .jobpilot__workflow-arrow,
+  .jobpilot__architecture-arrow {
+    grid-column: 3;
+    grid-row: 1;
+
+    align-self: start;
+  }
+
+
+  /* STACK */
+
+  .jobpilot__stack-section {
+    padding:
+      95px 0;
+  }
+
+  .jobpilot__stack {
+    gap: 7px;
+  }
+
+  .jobpilot__stack-item {
+    padding:
+      10px 13px;
+
+    font-size: 7px;
+  }
+
+
+  /* CONTRIBUTION */
+
+  .jobpilot__body li {
+    font-size: 11px;
+  }
+
+
+  /* CHALLENGES */
+
+  .jobpilot__challenge {
+    min-height: 250px;
+
+    padding: 25px;
+  }
+
+  .jobpilot__challenge > span {
+    margin-bottom: 55px;
+  }
+
+
+  /* RESULT */
+
+  .jobpilot__result {
+    padding:
+      110px 0
+      130px;
+  }
+
+  .jobpilot__result-content > span {
+    margin-bottom: 35px;
+  }
+
+  .jobpilot__result-content h2 {
+    margin-bottom: 40px;
+
+    font-size:
+      clamp(55px, 17vw, 100px);
+  }
+
+  .jobpilot__result-content p {
+    font-size: 12px;
+  }
+
+
+  /* LINKS */
+
+  .jobpilot__links {
+    padding:
+      70px 0
+      100px;
+  }
+
+  .jobpilot__links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jobpilot__links-grid a {
+    min-height: 110px;
+  }
+
+
+  /* BACKGROUND */
+
+  .jobpilot__background-number {
+    top: 8%;
+
+    right: -28%;
+
+    font-size: 320px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .jobpilot__container {
+    width:
+      calc(100% - 24px);
+  }
+
+  .jobpilot__hero-title {
+    font-size: 55px;
+  }
+
+  .jobpilot__visual {
+    min-height: 330px;
+  }
+
+  .jobpilot__visual-center strong {
+    font-size: 29px;
+  }
+
+  .jobpilot__visual-orbit {
+    width: 220px;
+    height: 220px;
+  }
+
+  .jobpilot__section-title {
+    font-size: 45px;
+  }
+
+  .jobpilot__result-content h2 {
+    font-size: 52px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .jobpilot__visual-inner,
+  .jobpilot__background-number {
+    transform: none !important;
+  }
+}

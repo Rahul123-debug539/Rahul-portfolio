@@ -1,0 +1,900 @@
+.contact {
+  position: relative;
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #0a0a0a;
+
+  color: #f5f5f5;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.contact__container {
+  position: relative;
+
+  z-index: 5;
+
+  width:
+    min(
+      1400px,
+      calc(100% - 96px)
+    );
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding:
+    150px 0
+    55px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =====================================================
+   BACKGROUND GRID
+===================================================== */
+
+.contact__grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.35;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.045)
+      1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.045)
+      1px,
+      transparent 1px
+    );
+
+  background-size:
+    90px 90px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 20%,
+      black 80%,
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   ORB
+===================================================== */
+
+.contact__orb {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -160px;
+  top: 20%;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.12);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  opacity: 0.5;
+}
+
+.contact__orb::before,
+.contact__orb::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 35px;
+
+  border:
+    1px dashed
+    rgba(255,255,255,0.1);
+
+  border-radius: 50%;
+}
+
+.contact__orb::after {
+  inset: 100px;
+
+  border-style: solid;
+
+  opacity: 0.5;
+}
+
+
+/* =====================================================
+   CROSS
+===================================================== */
+
+.contact__cross {
+  position: absolute;
+
+  right: 11%;
+  top: 23%;
+
+  z-index: 2;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 24px;
+
+  color: #555;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CORNERS
+===================================================== */
+
+.contact__corner {
+  position: absolute;
+
+  z-index: 4;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+
+  color: #3f3f3f;
+
+  pointer-events: none;
+}
+
+.contact__corner--top {
+  top: 112px;
+
+  right: 48px;
+}
+
+.contact__corner--bottom {
+  bottom: 30px;
+
+  right: 48px;
+}
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+.contact__top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+
+  color: #686868;
+}
+
+.contact__availability {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.contact__availability i {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #aaa;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(255,255,255,0.05);
+
+  animation:
+    contactPulse 2s
+    ease-in-out
+    infinite;
+}
+
+@keyframes contactPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.contact__main {
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.45fr)
+    minmax(320px, 0.55fr);
+
+  align-items: center;
+
+  gap: 80px;
+
+  padding:
+    90px 0
+    80px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.contact__heading-wrap {
+  position: relative;
+}
+
+.contact__mini-label {
+  margin-bottom: 25px;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+
+  color: #505050;
+}
+
+.contact__heading {
+  margin: 0;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    clamp(
+      64px,
+      9vw,
+      150px
+    );
+
+  line-height: 0.86;
+
+  font-weight: 700;
+
+  letter-spacing: -0.075em;
+}
+
+.contact__heading-line {
+  display: block;
+
+  overflow: hidden;
+}
+
+.contact__heading-line span {
+  display: inline-block;
+}
+
+.contact__heading-muted {
+  color: #454545;
+}
+
+
+/* =====================================================
+   HEADING META
+===================================================== */
+
+.contact__heading-meta {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 35px;
+}
+
+.contact__heading-meta span {
+  padding:
+    7px 11px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.12em;
+
+  color: #666;
+}
+
+
+/* =====================================================
+   SIDE
+===================================================== */
+
+.contact__side {
+  position: relative;
+
+  padding:
+    25px 0
+    25px 35px;
+
+  border-left:
+    1px solid
+    rgba(255,255,255,0.12);
+}
+
+.contact__side-index {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 35px;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+
+  color: #4d4d4d;
+}
+
+.contact__side-index strong {
+  font-size: 22px;
+
+  font-weight: 400;
+
+  color: #555;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.contact__description {
+  max-width: 390px;
+
+  margin:
+    0 0
+    38px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #8b8b8b;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.contact__button {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 68px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding:
+    0 20px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.22);
+
+  color: #f5f5f5;
+
+  background: transparent;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  text-decoration: none;
+
+  transition:
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.contact__button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: #f5f5f5;
+
+  transform:
+    translateY(101%);
+
+  transition:
+    transform 0.45s
+    cubic-bezier(
+      0.76,
+      0,
+      0.24,
+      1
+    );
+
+  z-index: -1;
+}
+
+.contact__button:hover {
+  color: #0a0a0a;
+
+  border-color: #f5f5f5;
+}
+
+.contact__button:hover::before {
+  transform:
+    translateY(0);
+}
+
+.contact__button-arrow {
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 20px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.contact__button:hover
+.contact__button-arrow {
+  transform:
+    translate(
+      5px,
+      -5px
+    );
+}
+
+
+/* =====================================================
+   EMAIL NOTE
+===================================================== */
+
+.contact__email-note {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: 25px;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.1em;
+
+  color: #454545;
+}
+
+.contact__email-note span:last-child {
+  color: #777;
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.contact__links {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.1);
+}
+
+.contact__link {
+  min-height: 78px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    0 20px;
+
+  border-right:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.1em;
+
+  color: #555;
+
+  text-decoration: none;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.contact__link:last-child {
+  border-right: 0;
+}
+
+.contact__link:hover {
+  color: #f5f5f5;
+
+  background:
+    rgba(255,255,255,0.035);
+}
+
+.contact__link span:last-child {
+  color: #777;
+
+  transition:
+    color 0.3s ease;
+}
+
+.contact__link:hover
+span:last-child {
+  color: #f5f5f5;
+}
+
+.contact__link b {
+  margin-left: 7px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.contact__footer {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr 1fr;
+
+  padding-top: 25px;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.14em;
+
+  color: #393939;
+}
+
+.contact__footer span:nth-child(2) {
+  text-align: center;
+}
+
+.contact__footer span:last-child {
+  text-align: right;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+  .contact__container {
+    width:
+      calc(100% - 60px);
+  }
+
+  .contact__main {
+    grid-template-columns:
+      1fr;
+
+    gap: 50px;
+
+    padding:
+      70px 0;
+  }
+
+  .contact__side {
+    max-width: 500px;
+
+    padding-left: 0;
+
+    border-left: 0;
+  }
+
+  .contact__orb {
+    right: -220px;
+
+    top: 35%;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+  .contact {
+    min-height: auto;
+  }
+
+  .contact__container {
+    width:
+      calc(100% - 36px);
+
+    min-height: auto;
+
+    padding:
+      110px 0
+      35px;
+  }
+
+  .contact__top {
+    font-size: 7px;
+
+    gap: 20px;
+  }
+
+  .contact__availability {
+    text-align: right;
+  }
+
+  .contact__main {
+    gap: 45px;
+
+    padding:
+      65px 0
+      60px;
+  }
+
+  .contact__heading {
+    font-size:
+      clamp(
+        52px,
+        15vw,
+        90px
+      );
+
+    line-height: 0.9;
+  }
+
+  .contact__heading-meta {
+    flex-wrap: wrap;
+  }
+
+  .contact__description {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .contact__links {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__link {
+    min-height: 68px;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      rgba(255,255,255,0.1);
+  }
+
+  .contact__link:last-child {
+    border-bottom: 0;
+  }
+
+  .contact__footer {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 15px;
+  }
+
+  .contact__footer span:nth-child(2) {
+    text-align: right;
+  }
+
+  .contact__footer span:last-child {
+    grid-column: 1 / -1;
+
+    text-align: left;
+  }
+
+  .contact__corner {
+    display: none;
+  }
+
+  .contact__orb {
+    width: 300px;
+    height: 300px;
+
+    right: -180px;
+
+    top: 35%;
+
+    opacity: 0.3;
+  }
+
+  .contact__cross {
+    right: 10%;
+
+    top: 18%;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+  .contact__container {
+    width:
+      calc(100% - 28px);
+  }
+
+  .contact__heading {
+    font-size:
+      clamp(
+        45px,
+        14vw,
+        70px
+      );
+  }
+
+  .contact__top {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .contact__availability {
+    text-align: left;
+  }
+
+  .contact__button {
+    min-height: 62px;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact__orb,
+  .contact__cross,
+  .contact__availability i {
+    animation: none;
+  }
+
+  .contact__button,
+  .contact__button::before,
+  .contact__link {
+    transition: none;
+  }
+}

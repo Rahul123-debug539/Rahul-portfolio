@@ -1,0 +1,1586 @@
+/* =========================================================
+   ABOUT PAGE
+   Premium Editorial / Dark Portfolio
+========================================================= */
+
+.about-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #0a0a0a;
+  color: #f5f5f5;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.about-page__grid {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  opacity: 0.14;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 100px 100px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 0%,
+      transparent 88%
+    );
+}
+
+
+/* =========================================================
+   LARGE BACKGROUND TEXT
+========================================================= */
+
+.about-page__background-number {
+  position: absolute;
+
+  top: 8%;
+  right: -7%;
+
+  z-index: 0;
+
+  pointer-events: none;
+  user-select: none;
+
+  font-size: clamp(
+    300px,
+    40vw,
+    650px
+  );
+
+  line-height: 0.7;
+
+  font-weight: 500;
+
+  letter-spacing: -0.1em;
+
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(255, 255, 255, 0.035);
+
+  white-space: nowrap;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.about-page__container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    1400px,
+    calc(100% - 96px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.about-page__hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 0 80px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   HERO EYEBROW
+========================================================= */
+
+.about-page__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 22px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+
+  color: #555;
+}
+
+.about-page__eyebrow span:first-child {
+  color: #aaa;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.about-page__hero-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    360px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding: 100px 0 80px;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.about-page__hero-title {
+  margin: 0;
+
+  font-size:
+    clamp(
+      95px,
+      13vw,
+      190px
+    );
+
+  line-height: 0.73;
+
+  font-weight: 500;
+
+  letter-spacing: -0.09em;
+
+  text-transform: uppercase;
+}
+
+.about-page__hero-line {
+  display: block;
+
+  overflow: hidden;
+}
+
+.about-page__hero-line span {
+  display: inline-block;
+}
+
+.about-page__hero-muted {
+  color: #3e3e3e;
+}
+
+
+/* =========================================================
+   HERO COPY
+========================================================= */
+
+.about-page__hero-copy {
+  align-self: end;
+
+  max-width: 360px;
+
+  padding-bottom: 5px;
+}
+
+.about-page__hero-copy-label {
+  display: block;
+
+  margin-bottom: 24px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+
+  color: #444;
+}
+
+.about-page__hero-copy p {
+  margin: 0 0 22px;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #707070;
+}
+
+.about-page__hero-copy p:first-of-type {
+  font-size: 18px;
+
+  line-height: 1.65;
+
+  color: #aaa;
+}
+
+
+/* =========================================================
+   HERO FOOTER
+========================================================= */
+
+.about-page__hero-footer {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    1fr;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  color: #4c4c4c;
+}
+
+.about-page__hero-footer span:nth-child(2) {
+  text-align: center;
+}
+
+.about-page__hero-footer span:last-child {
+  text-align: right;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.about-page__section {
+  position: relative;
+
+  padding: 140px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.about-page__section--border {
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================================
+   SECTION TOP
+========================================================= */
+
+.about-page__section-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+
+  color: #555;
+}
+
+.about-page__section-top span:first-child {
+  color: #aaa;
+}
+
+
+/* =========================================================
+   TWO COLUMN
+========================================================= */
+
+.about-page__two-column {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    390px;
+
+  gap: 110px;
+
+  padding-top: 95px;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.about-page__section-title {
+  margin: 0;
+
+  font-size:
+    clamp(
+      70px,
+      8.5vw,
+      125px
+    );
+
+  line-height: 0.78;
+
+  font-weight: 500;
+
+  letter-spacing: -0.08em;
+
+  text-transform: uppercase;
+}
+
+.about-page__section-title-line {
+  display: block;
+
+  overflow: hidden;
+}
+
+.about-page__section-title-line span {
+  display: inline-block;
+}
+
+.about-page__muted {
+  color: #3f3f3f;
+}
+
+
+/* =========================================================
+   BODY COPY
+========================================================= */
+
+.about-page__body {
+  align-self: end;
+
+  max-width: 390px;
+}
+
+.about-page__body p {
+  margin: 0 0 24px;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #6c6c6c;
+}
+
+.about-page__body .about-page__large-text {
+  margin-bottom: 30px;
+
+  font-size: 19px;
+
+  line-height: 1.65;
+
+  color: #aaa;
+}
+
+
+/* =========================================================
+   BUILD LIST
+========================================================= */
+
+.about-page__build-list {
+  margin-top: 40px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.about-page__build-list > div {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    40px
+    1fr;
+
+  gap: 15px;
+
+  padding: 22px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  transition:
+    background 0.35s ease;
+}
+
+.about-page__build-list > div:hover {
+  background:
+    rgba(255, 255, 255, 0.018);
+}
+
+.about-page__build-list > div > span {
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  color: #444;
+}
+
+.about-page__build-list strong {
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+
+  color: #aaa;
+}
+
+.about-page__build-list p {
+  grid-column: 2;
+
+  margin: 7px 0 0;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  color: #555;
+}
+
+
+/* =========================================================
+   STACK HEADING
+========================================================= */
+
+.about-page__stack-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    320px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding: 95px 0 70px;
+}
+
+.about-page__stack-heading p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   STACK GRID
+========================================================= */
+
+.about-page__stack-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   STACK CARD
+========================================================= */
+
+.about-page__stack-card {
+  min-height: 300px;
+
+  padding: 25px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  transition:
+    background 0.4s ease;
+}
+
+.about-page__stack-card:hover {
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+
+/* =========================================================
+   STACK CARD TOP
+========================================================= */
+
+.about-page__stack-card-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  color: #444;
+}
+
+.about-page__stack-card-top span:first-child {
+  color: #888;
+}
+
+
+/* =========================================================
+   STACK TITLE
+========================================================= */
+
+.about-page__stack-card h3 {
+  margin: 85px 0 30px;
+
+  font-size:
+    clamp(
+      30px,
+      4vw,
+      55px
+    );
+
+  line-height: 0.9;
+
+  font-weight: 500;
+
+  letter-spacing: -0.055em;
+
+  color: #ddd;
+}
+
+
+/* =========================================================
+   STACK ITEMS
+========================================================= */
+
+.about-page__stack-items {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.about-page__stack-items span {
+  padding: 9px 12px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 100px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.08em;
+
+  color: #666;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.about-page__stack-items span:hover {
+  color: #f5f5f5;
+
+  border-color:
+    rgba(255, 255, 255, 0.3);
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   JOURNEY HEADING
+========================================================= */
+
+.about-page__journey-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    320px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  padding: 95px 0 80px;
+}
+
+.about-page__journey-heading p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   JOURNEY LIST
+========================================================= */
+
+.about-page__journey-list {
+  position: relative;
+
+  padding: 10px 0;
+}
+
+
+/* =========================================================
+   JOURNEY LINE
+========================================================= */
+
+.about-page__journey-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 120px;
+
+  width: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+}
+
+.about-page__journey-progress {
+  width: 100%;
+  height: 100%;
+
+  background: #777;
+
+  transform:
+    scaleY(0);
+
+  transform-origin:
+    top center;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   JOURNEY ITEM
+========================================================= */
+
+.about-page__journey-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    120px
+    minmax(0, 1fr)
+    40px;
+
+  gap: 55px;
+
+  min-height: 210px;
+
+  padding: 40px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  transition:
+    background 0.35s ease;
+}
+
+.about-page__journey-item:hover {
+  background:
+    rgba(255, 255, 255, 0.018);
+}
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+.about-page__journey-year {
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 0.12em;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   DOT
+========================================================= */
+
+.about-page__journey-dot {
+  position: absolute;
+
+  left: 120px;
+
+  top: 48px;
+
+  width: 9px;
+  height: 9px;
+
+  transform:
+    translateX(-50%);
+
+  border:
+    1px solid
+    #777;
+
+  border-radius: 50%;
+
+  background: #0a0a0a;
+
+  z-index: 3;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.about-page__journey-item:hover
+.about-page__journey-dot {
+  transform:
+    translateX(-50%)
+    scale(1.4);
+
+  background: #f5f5f5;
+}
+
+
+/* =========================================================
+   JOURNEY CONTENT
+========================================================= */
+
+.about-page__journey-content {
+  padding-left: 35px;
+}
+
+.about-page__journey-content > span {
+  display: block;
+
+  margin-bottom: 16px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+
+  color: #3f3f3f;
+}
+
+.about-page__journey-content h3 {
+  margin: 0 0 15px;
+
+  font-size:
+    clamp(
+      25px,
+      3vw,
+      42px
+    );
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: -0.045em;
+
+  color: #ddd;
+}
+
+.about-page__journey-content p {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+
+  color: #646464;
+}
+
+
+/* =========================================================
+   JOURNEY ARROW
+========================================================= */
+
+.about-page__journey-arrow {
+  justify-self: end;
+
+  font-size: 18px;
+
+  color: #444;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.about-page__journey-item:hover
+.about-page__journey-arrow {
+  color: #ddd;
+
+  transform:
+    translate(
+      4px,
+      -4px
+    );
+}
+
+
+/* =========================================================
+   CURRENT FOCUS
+========================================================= */
+
+.about-page__focus {
+  position: relative;
+
+  padding: 180px 0;
+
+  overflow: hidden;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.about-page__focus::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 600px;
+  height: 600px;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.05),
+      transparent 65%
+    );
+
+  pointer-events: none;
+}
+
+.about-page__focus-content {
+  position: relative;
+
+  max-width: 900px;
+}
+
+.about-page__focus-label {
+  display: block;
+
+  margin-bottom: 35px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+
+  color: #555;
+}
+
+.about-page__focus h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      85px,
+      12vw,
+      180px
+    );
+
+  line-height: 0.78;
+
+  font-weight: 500;
+
+  letter-spacing: -0.09em;
+}
+
+.about-page__focus h2 span {
+  color: #3e3e3e;
+}
+
+.about-page__focus p {
+  max-width: 470px;
+
+  margin: 55px 0 35px;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #707070;
+}
+
+
+/* =========================================================
+   FOCUS TAGS
+========================================================= */
+
+.about-page__focus-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.about-page__focus-tags span {
+  padding: 9px 13px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 100px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.1em;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.about-page__cta {
+  position: relative;
+
+  padding: 150px 0 170px;
+
+  overflow: hidden;
+}
+
+.about-page__cta > .about-page__container > span {
+  display: block;
+
+  margin-bottom: 50px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+
+  color: #555;
+}
+
+.about-page__cta h2 {
+  margin: 0 0 65px;
+
+  font-size:
+    clamp(
+      75px,
+      11vw,
+      160px
+    );
+
+  line-height: 0.78;
+
+  font-weight: 500;
+
+  letter-spacing: -0.09em;
+}
+
+.about-page__cta h2 span {
+  color: #3f3f3f;
+}
+
+
+/* =========================================================
+   CTA LINK
+========================================================= */
+
+.about-page__cta a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-width: 240px;
+
+  gap: 50px;
+
+  padding: 16px 18px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.18);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.13em;
+
+  color: #aaa;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.about-page__cta a:hover {
+  background: #f5f5f5;
+
+  color: #0a0a0a;
+
+  border-color: #f5f5f5;
+
+  transform:
+    translateY(-3px);
+}
+
+.about-page__cta a span {
+  font-size: 18px;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.about-page__cta a:hover span {
+  transform:
+    translate(
+      4px,
+      -4px
+    );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .about-page__container {
+    width:
+      calc(100% - 60px);
+  }
+
+  .about-page__hero-content {
+    grid-template-columns:
+      1fr;
+
+    gap: 60px;
+
+    padding:
+      80px 0
+      65px;
+  }
+
+  .about-page__hero-copy {
+    max-width: 600px;
+  }
+
+  .about-page__two-column {
+    grid-template-columns:
+      1fr;
+
+    gap: 60px;
+  }
+
+  .about-page__body {
+    max-width: 600px;
+  }
+
+  .about-page__stack-heading,
+  .about-page__journey-heading {
+    grid-template-columns:
+      1fr
+      280px;
+
+    gap: 60px;
+  }
+
+  .about-page__journey-item {
+    grid-template-columns:
+      90px
+      minmax(0, 1fr)
+      30px;
+
+    gap: 45px;
+  }
+
+  .about-page__journey-line {
+    left: 90px;
+  }
+
+  .about-page__journey-dot {
+    left: 90px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .about-page__container {
+    width:
+      calc(100% - 30px);
+  }
+
+  /* HERO */
+
+  .about-page__hero {
+    min-height: auto;
+
+    padding:
+      120px 0
+      70px;
+  }
+
+  .about-page__eyebrow {
+    font-size: 7px;
+  }
+
+  .about-page__hero-content {
+    padding:
+      70px 0
+      55px;
+
+    gap: 45px;
+  }
+
+  .about-page__hero-title {
+    font-size:
+      clamp(
+        62px,
+        18vw,
+        100px
+      );
+
+    line-height: 0.8;
+  }
+
+  .about-page__hero-copy {
+    max-width: 100%;
+  }
+
+  .about-page__hero-copy p {
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+  .about-page__hero-copy p:first-of-type {
+    font-size: 16px;
+  }
+
+  .about-page__hero-footer {
+    grid-template-columns:
+      1fr;
+
+    gap: 12px;
+
+    font-size: 6px;
+  }
+
+  .about-page__hero-footer span:nth-child(2),
+  .about-page__hero-footer span:last-child {
+    text-align: left;
+  }
+
+
+  /* SECTIONS */
+
+  .about-page__section {
+    padding:
+      90px 0;
+  }
+
+  .about-page__section-top {
+    font-size: 7px;
+  }
+
+  .about-page__two-column {
+    padding-top: 60px;
+
+    gap: 45px;
+  }
+
+  .about-page__section-title {
+    font-size:
+      clamp(
+        52px,
+        15vw,
+        82px
+      );
+
+    line-height: 0.82;
+  }
+
+  .about-page__body .about-page__large-text {
+    font-size: 16px;
+  }
+
+  .about-page__body p {
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+
+  /* BUILD */
+
+  .about-page__build-list {
+    margin-top: 30px;
+  }
+
+  .about-page__build-list > div {
+    padding: 18px 0;
+  }
+
+  .about-page__build-list strong {
+    font-size: 11px;
+  }
+
+  .about-page__build-list p {
+    font-size: 10px;
+  }
+
+
+  /* STACK */
+
+  .about-page__stack-heading,
+  .about-page__journey-heading {
+    grid-template-columns:
+      1fr;
+
+    gap: 35px;
+
+    padding:
+      60px 0
+      55px;
+  }
+
+  .about-page__stack-heading p,
+  .about-page__journey-heading p {
+    font-size: 12px;
+  }
+
+  .about-page__stack-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .about-page__stack-card {
+    min-height: 260px;
+
+    padding: 20px;
+  }
+
+  .about-page__stack-card h3 {
+    margin:
+      70px 0
+      25px;
+
+    font-size: 38px;
+  }
+
+
+  /* JOURNEY */
+
+  .about-page__journey-list {
+    padding: 0;
+  }
+
+  .about-page__journey-line {
+    left: 62px;
+  }
+
+  .about-page__journey-item {
+    grid-template-columns:
+      62px
+      minmax(0, 1fr);
+
+    gap: 18px;
+
+    min-height: 180px;
+
+    padding:
+      30px 0;
+  }
+
+  .about-page__journey-dot {
+    left: 62px;
+
+    top: 37px;
+
+    width: 8px;
+    height: 8px;
+  }
+
+  .about-page__journey-content {
+    padding-left: 15px;
+  }
+
+  .about-page__journey-content h3 {
+    font-size: 22px;
+
+    line-height: 1.05;
+  }
+
+  .about-page__journey-content p {
+    font-size: 10px;
+
+    line-height: 1.75;
+  }
+
+  .about-page__journey-content > span {
+    font-size: 6px;
+  }
+
+  .about-page__journey-arrow {
+    display: none;
+  }
+
+
+  /* FOCUS */
+
+  .about-page__focus {
+    padding:
+      110px 0;
+  }
+
+  .about-page__focus h2 {
+    font-size:
+      clamp(
+        62px,
+        18vw,
+        105px
+      );
+  }
+
+  .about-page__focus p {
+    margin-top: 40px;
+
+    font-size: 12px;
+  }
+
+  .about-page__focus-tags span {
+    font-size: 6px;
+
+    padding:
+      8px 10px;
+  }
+
+
+  /* CTA */
+
+  .about-page__cta {
+    padding:
+      100px 0
+      120px;
+  }
+
+  .about-page__cta h2 {
+    margin-bottom: 45px;
+
+    font-size:
+      clamp(
+        58px,
+        17vw,
+        100px
+      );
+  }
+
+  .about-page__cta a {
+    min-width: 210px;
+
+    padding:
+      13px 14px;
+
+    font-size: 7px;
+  }
+
+
+  /* BACKGROUND */
+
+  .about-page__background-number {
+    top: 12%;
+
+    right: -30%;
+
+    font-size: 300px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .about-page__container {
+    width:
+      calc(100% - 24px);
+  }
+
+  .about-page__hero-title {
+    font-size: 58px;
+  }
+
+  .about-page__section-title {
+    font-size: 48px;
+  }
+
+  .about-page__journey-line {
+    left: 55px;
+  }
+
+  .about-page__journey-dot {
+    left: 55px;
+  }
+
+  .about-page__journey-item {
+    grid-template-columns:
+      55px
+      minmax(0, 1fr);
+
+    gap: 14px;
+  }
+
+  .about-page__journey-content {
+    padding-left: 10px;
+  }
+
+  .about-page__focus h2 {
+    font-size: 56px;
+  }
+
+  .about-page__cta h2 {
+    font-size: 53px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page__background-number {
+    transform: none !important;
+  }
+
+  .about-page__journey-progress {
+    transform: scaleY(1) !important;
+  }
+}
