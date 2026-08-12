@@ -337,14 +337,16 @@ const Navbar = () => {
           data-cursor="home"
         >
           <span className="navbar__logo-mark">
-            R
+            <img
+              src="/favicon.png"
+              alt="Rahul Tiwari"
+            />
           </span>
 
           <span className="navbar__logo-name">
             RAHUL
           </span>
         </Link>
-
         {/* =================================================
             DESKTOP NAVIGATION
         ================================================= */}
